@@ -7,4 +7,5 @@ target 'JustDoIt' do
   # Pods for JustDoIt
 pod 'RealmSwift'
 pod 'SwipeCellKit'
+pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 end
