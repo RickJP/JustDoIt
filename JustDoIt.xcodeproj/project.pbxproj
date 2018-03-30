@@ -14,6 +14,7 @@
 		1DE416FA206BCCE200C8D1DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE416F8206BCCE200C8D1DA /* Main.storyboard */; };
 		1DE416FC206BCCE200C8D1DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DE416FB206BCCE200C8D1DA /* Assets.xcassets */; };
 		1DE416FF206BCCE200C8D1DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DE416FD206BCCE200C8D1DA /* LaunchScreen.storyboard */; };
+		DB77FAAA38BE21F46B03C186 /* Pods_JustDoIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 952D69F0E0BFF5718F22F06F /* Pods_JustDoIt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		1DE416FB206BCCE200C8D1DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DE416FE206BCCE200C8D1DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DE41700206BCCE200C8D1DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		645A29C1D2D809000F7918F0 /* Pods-JustDoIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustDoIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustDoIt/Pods-JustDoIt.debug.xcconfig"; sourceTree = "<group>"; };
+		8BF1448ED3743E07E578D5AC /* Pods-JustDoIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustDoIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustDoIt/Pods-JustDoIt.release.xcconfig"; sourceTree = "<group>"; };
+		952D69F0E0BFF5718F22F06F /* Pods_JustDoIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustDoIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,12 +37,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB77FAAA38BE21F46B03C186 /* Pods_JustDoIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		027ACD92E497C4DCB21C4F40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				952D69F0E0BFF5718F22F06F /* Pods_JustDoIt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1DBD3E3B206C841A008EEB4A /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,8 @@
 			children = (
 				1DE416F3206BCCE200C8D1DA /* JustDoIt */,
 				1DE416F2206BCCE200C8D1DA /* Products */,
+				BD6325298178FE03ED0CD7DF /* Pods */,
+				027ACD92E497C4DCB21C4F40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +117,15 @@
 			path = JustDoIt;
 			sourceTree = "<group>";
 		};
+		BD6325298178FE03ED0CD7DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				645A29C1D2D809000F7918F0 /* Pods-JustDoIt.debug.xcconfig */,
+				8BF1448ED3743E07E578D5AC /* Pods-JustDoIt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DE41703206BCCE200C8D1DA /* Build configuration list for PBXNativeTarget "JustDoIt" */;
 			buildPhases = (
+				788F3742592F81B2BBA7C03D /* [CP] Check Pods Manifest.lock */,
 				1DE416ED206BCCE200C8D1DA /* Sources */,
 				1DE416EE206BCCE200C8D1DA /* Frameworks */,
 				1DE416EF206BCCE200C8D1DA /* Resources */,
+				B9074294BCC35E9CCD4087B7 /* [CP] Embed Pods Frameworks */,
+				97BBC4EE3490272CADB0C2CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +195,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		788F3742592F81B2BBA7C03D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JustDoIt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97BBC4EE3490272CADB0C2CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustDoIt/Pods-JustDoIt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9074294BCC35E9CCD4087B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JustDoIt/Pods-JustDoIt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustDoIt/Pods-JustDoIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DE416ED206BCCE200C8D1DA /* Sources */ = {
@@ -312,6 +395,7 @@
 		};
 		1DE41704206BCCE200C8D1DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 645A29C1D2D809000F7918F0 /* Pods-JustDoIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +411,7 @@
 		};
 		1DE41705206BCCE200C8D1DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BF1448ED3743E07E578D5AC /* Pods-JustDoIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
