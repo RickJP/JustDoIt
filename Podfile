@@ -6,4 +6,5 @@ target 'JustDoIt' do
 
   # Pods for JustDoIt
 pod 'RealmSwift'
+pod 'SwipeCellKit'
 end

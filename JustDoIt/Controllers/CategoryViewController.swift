@@ -9,7 +9,8 @@
 import UIKit
 import RealmSwift
 
-class CategoryViewController: UITableViewController {
+
+class CategoryViewController: SwipeTableViewController {
 
     let realm = try! Realm()
     
@@ -19,20 +20,21 @@ class CategoryViewController: UITableViewController {
         super.viewDidLoad()
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         loadCategories()
+
     }
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories?.count ?? 1
     }
-    
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCategoryCell", for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
-        cell.textLabel?.text = categories?[indexPath.row].name ?? "No categories added yet"
- 
+        cell.textLabel?.text = categories?[indexPath.row].name ?? "No categories added yet."
+
         return cell
     }
     
@@ -69,7 +71,6 @@ class CategoryViewController: UITableViewController {
                 
                 self.save(category: newCategory)
             }
-            
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (cancel) in
@@ -78,7 +79,6 @@ class CategoryViewController: UITableViewController {
         
         alert.addAction(cancel)
         alert.addAction(confirm)
-        
         
         alert.addTextField { (field) in
             
@@ -97,6 +97,21 @@ class CategoryViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    //MARK: - Delete data from swipe
+    override func updateModel(at indexPath: IndexPath) {
+        
+        if let categoryForDeletion = self.categories?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(categoryForDeletion)
+                }
+            } catch {
+                print("Couldn't delete category")
+            }
+        }
+        
+    }
+    
     
     func save(category : Category) {
         
@@ -109,8 +124,9 @@ class CategoryViewController: UITableViewController {
         }
         tableView.reloadData()
     }
-    
-    //MARK: - TableView Delegate Methods
 }
+
+//MARK: - Swipe Cell Delegate Methods
+
 
 

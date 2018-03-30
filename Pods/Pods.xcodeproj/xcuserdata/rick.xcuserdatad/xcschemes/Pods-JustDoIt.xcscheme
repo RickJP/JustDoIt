@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F1512087F71A86B4FD860588630AC9B4"
+               BlueprintIdentifier = "1BEC140F6D5514A45F0ECEA760B98B4F"
                BuildableName = "Pods_JustDoIt.framework"
                BlueprintName = "Pods-JustDoIt"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F1512087F71A86B4FD860588630AC9B4"
+            BlueprintIdentifier = "1BEC140F6D5514A45F0ECEA760B98B4F"
             BuildableName = "Pods_JustDoIt.framework"
             BlueprintName = "Pods-JustDoIt"
             ReferencedContainer = "container:Pods.xcodeproj">
